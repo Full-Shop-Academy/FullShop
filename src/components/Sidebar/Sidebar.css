@@ -1,0 +1,72 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -400px; /* Sidebar starts off the screen to the right */
+    width: 400px;  /* Set a fixed width for the sidebar */
+    height: 100%;
+    background-color: #f4f4f4;
+    padding: 20px 10px;  /* Reduce padding on the sides for uniformity */
+    transition: right 0.3s; /* Transition for the right property */
+    overflow-y: auto; /* Allows scrolling if the content exceeds the height */
+    z-index: 1000; /* Ensures the sidebar appears above other content */
+    max-height: 100vh; /* Prevent overflow */
+}
+
+.sidebar.open {
+    right: 0; /* When the sidebar is open, it's fully visible on the screen */
+}
+
+.cart-item, .close-btn {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* Styles for cart items within the sidebar */
+.sidebar .cart-item {
+    display: flex;
+    flex-direction: column; /* Cart items stack vertically */
+    align-items: start; /* Align left */
+    margin-bottom: 20px;
+}
+
+.sidebar .cart-item img {
+    width: 50px;
+    margin-right: 10px;
+}
+
+.sidebar .cart-item-info {
+    flex: 1; /* Take up the remaining space */
+    display: flex;
+    flex-direction: row; /* Align product info horizontally */
+    justify-content: space-between; /* Distribute content evenly */
+    align-items: center;
+    width: 100%; /* Full width */
+}
+
+.sidebar .cart-item-info .product-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar .cart-item-info .product-price {
+    margin-bottom: 5px; /* Space below the price */
+}
+
+.sidebar .cart-item-actions {
+    display: flex;
+    align-items: center;
+}
+
+.sidebar .cart-item-actions button {
+    margin-left: 5px;
+}
+
+/* Media Query for Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;   /* Full width on smaller screens */
+        right: -100%;  /* Adjust hiding position */
+    }
+}
+
+/* If there's any other global CSS, it should be placed above specific CSS like above. This allows for easier overriding and clarity. */

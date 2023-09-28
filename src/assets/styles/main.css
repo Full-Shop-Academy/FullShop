@@ -1,0 +1,107 @@
+/* Reset and Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: #0077cc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  margin-right: 10px;
+}
+
+/* Product List and Details */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-item {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail {
+  display: flex;
+  gap: 20px;
+}
+
+.product-image {
+  flex: 1;
+}
+
+.product-info {
+  flex: 2;
+}
+
+/* Cart and Sidebar */
+.cart {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Filters and Sorting */
+.filters, .sort {
+  margin-bottom: 20px;
+}
+
+/* Add this to your CSS for the sidebar overlay */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Ensure it's below the sidebar but above everything else */
+}
+
+/* Media query for screens with a maximum width of 768px */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 80%;   
+    right: -100%;  /* adjust the hiding position */
+    overflow-y: auto;  /* This line allows the sidebar content to be scrollable */
+    height: 100%;     /* Ensure sidebar takes the full height of the viewport */
+    position: fixed;  /* Ensure sidebar is fixed to allow for proper scrolling */
+}
+}

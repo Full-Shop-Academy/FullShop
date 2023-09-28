@@ -1,0 +1,200 @@
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    transition: right 0.3s;
+    overflow-y: auto;  /* Add this line */
+}
+
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.close-btn {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.cart-sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.cart-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cart-sidebar li {
+    display: flex;
+    flex-direction: column; /* Changed to column for vertical arrangement */
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cart-sidebar img {
+    margin-bottom: 10px; /* Space added under image */
+    width: 100%; /* Ensuring full width of the container */
+    max-width: 200px; /* Just for control, can be adjusted */
+}
+
+.cart-item-info { 
+    display: flex; 
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cart-sidebar button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin-left: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.cart-sidebar button:hover {
+    background-color: #555;
+}
+
+.checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.checkout-btn:hover {
+    background-color: #0056b3;
+}
+
+/* ... previous CSS ... */
+
+/* Modal styles */
+
+.checkout-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Arial", sans-serif; /* Standard font stack for consistency */
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    width: 450px; /* Increased width for better space */
+    text-align: left;
+    position: relative; /* Added for close button positioning */
+}
+
+.modal-content h3 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px; /* Larger header */
+}
+
+.shipping-info, .payment-method {
+    margin-bottom: 15px;
+}
+
+.shipping-info input, 
+.payment-method select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px; /* Larger font size for readability */
+}
+
+.payment-method select {
+    cursor: pointer;
+}
+
+.modal-content button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.modal-content button:hover {
+    background-color: #555;
+}
+
+.close-modal-btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+
+
+/* Additional styles */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999; /* Ensure it's below the sidebar but above everything else */
+}
+
+.cart-item-actions button {
+    max-width: calc(100% - 10px); 
+    white-space: nowrap;   
+    overflow: auto;   
+    text-overflow: auto;  
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+}
+
+.button-group button {
+    width: 100%; 
+}

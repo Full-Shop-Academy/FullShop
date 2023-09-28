@@ -1,0 +1,84 @@
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 90%;  /* Increase from 800px to 90% of its parent */
+    max-height: 90%;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.product-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-detail h2, .product-detail p {
+    text-align: center;
+}
+
+.product-detail h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-detail p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .product-detail {
+        flex-direction: row;
+        gap: 40px;
+    }
+
+    .product-detail img {
+        max-width: 40%;  /* Reduced to 40% so it doesn't dominate the layout */
+    }
+
+    .product-detail div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        flex: 1;
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 95%;  /* Increased from 90% to 95% */
+    max-height: 70%;
+    overflow: auto;
+}
+
+
+.modal-content {
+    width: 80% !important;
+}

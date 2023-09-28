@@ -1,0 +1,74 @@
+/* src/components/Header/Header.css */
+
+/* Header styles */
+.header {
+  background-image: url('../src/assets/images/header-background.png'); 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; /* Updated to cover to fit the entire container */
+  color: rgb(0, 0, 0);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh; /* Set the height to 10% of the viewport height */
+}
+
+/* Logo styles */
+.logo img {
+  width: 100px;
+}
+
+/* Navigation styles */
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+/* Style the navigation links */
+.navigation a {
+  color: rgb(38, 97, 191);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px; /* Add padding to the links for better clickability */
+  border-radius: 4px; /* Add rounded corners to the links */
+  transition: background-color 0.3s; /* Add a smooth background color transition on hover */
+}
+
+/* Style the login link differently */
+.navigation .login-link {
+  background-color: #007bff;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 20px; /* Add spacing between login and other links */
+  padding: 8px 16px;
+}
+
+/* Style the cart link */
+.navigation .cart-link {
+  margin-right: 20px; /* Add spacing between cart and other links */
+  padding: 8px 16px;
+}
+
+/* Hover effect for all links */
+.navigation a:hover {
+  background-color: #333; /* Change the background color on hover */
+}
+
+/* Sidebar overlay styles */
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Ensure it's below the sidebar but above everything else */
+}
+
+/* Left section styles */
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
