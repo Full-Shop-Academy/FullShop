@@ -24,7 +24,7 @@ const Header = ({ loggedIn, onLogout, userData }) => {
           {navigationLinks}
         </nav>
         <div className="logo">
-          <Link to="/">Full Shop Academy</Link>
+          <Link to="/">FullShop</Link>
         </div>
       </div>
     </header>
